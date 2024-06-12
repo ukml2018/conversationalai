@@ -13,4 +13,4 @@ langchain
 langchain_core
 langchain_openai
 pymssql
-chromadb
+chromadb==0.3.29
