@@ -46,8 +46,81 @@ map_data= [{"Find Imperial market share for outlet 0015I00000OYJeHQAX":"perf_ins
                {"Find name and rank of the distinct top 15 power rank for Imperial SKUs from the micro region of outlet 0017S00000eKOdZQAW":"dist_ins_3.4"},
                ]
 
-st.title("Imperial Brands Chatbot")
+# Set a smaller font size for the subheading
+heading_style = "<h3 style='font-size: 25px;'>"
+# Set the CSS style for the subheading
+subheading_style = """
+    <style>
+    .subheading {
+        font-size: 16px;
+        color: blue;
+    }
+    </style>
+"""
 
+# Set the CSS style for the page background color
+background_style = """
+    <style>
+    body {
+        background-color: #BBF7FC;
+    }
+    </style>
+"""
+# Set the CSS style for the image caption
+caption_style = """
+    <style>
+    .image-caption {
+        color: blue;
+    }
+    </style>
+"""
+# Set the CSS style for aligning the subheading and image
+alignment_style = """
+    <style>
+    .centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+    </style>
+"""
+st.markdown("""
+<style>
+body {
+  background: #ff0099; 
+  background: -webkit-linear-gradient(to right, #ff0099, #493240); 
+  background: linear-gradient(to right, #ff0099, #493240); 
+}
+</style>
+    """, unsafe_allow_html=True)
+greeting_style = "<h3 style='font-size: 12px;'>"
+# Apply the background color style to the page
+#st.markdown(background_style, unsafe_allow_html=True)
+st.markdown(alignment_style, unsafe_allow_html=True)
+st.title("Field Force Chat Assistance")
+#st.markdown(subheading_style + "Please start your personalized interaction with the chatbot" + "</h3>", unsafe_allow_html=True)
+# Display the subheading with the custom CSS style
+st.markdown(subheading_style, unsafe_allow_html=True)
+#st.markdown("<h3 class='subheading'>Please start your personalized interaction with the chatbot</h3>", unsafe_allow_html=True)
+st.markdown(subheading_style + "Please start your personalized interaction with the chatbot" + "</h3>", unsafe_allow_html=True)
+# Display the image from a local path
+image_path = "static/chatbot1.png"
+#st.image(image_path, caption="Hi! I'm your AI-Generative Chatbot")
+#st.image(image_path, caption="Hi! I'm your AI-Generative Chatbot", width=300)
+st.image(image_path, width=300)
+# Apply the caption style
+st.markdown(caption_style, unsafe_allow_html=True)
+
+# Display the subheading and image within a centered container
+#st.markdown(alignment_style, unsafe_allow_html=True)
+'''
+Hi! I'm your AI-Generative Chatbot
+'''
+# Apply the background color style to the page
+#st.markdown(background_style, unsafe_allow_html=True)
 
 if "messages" not in st.session_state:
     
